@@ -1,58 +1,36 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meesho Nearby</title><style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-:root{--bg:#FBF3F9;--ink:#1F1B2E;--acc:#8E1A74;--ok:#1E8E5A;--warn:#D98A00;--bad:#C73A3A;--line:#E3E4EE}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.5}
-nav{display:flex;gap:6px;align-items:center;padding:12px 24px;background:#fff;border-bottom:1px solid var(--line);flex-wrap:wrap}
-nav b{margin-right:12px}
-nav a{padding:6px 14px;border-radius:999px;color:var(--ink);text-decoration:none;font-size:14px}
-nav a:hover{background:var(--bg)} nav a.on{background:var(--acc);color:#fff}
-main{max-width:1100px;margin:0 auto;padding:28px 24px}
-h1{font-size:30px;margin:0 0 6px} h2{font-size:18px;margin:0 0 12px} p.sub{margin:0 0 24px;color:#5b5670}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-a.card{color:inherit;text-decoration:none} a.card:hover{border-color:var(--acc)}
-.two{display:grid;grid-template-columns:1fr 1.1fr;gap:20px} @media(max-width:800px){.two{grid-template-columns:1fr}}
-label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px}
-input[type=text],input[type=number]{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit}
-input[type=range]{width:100%;accent-color:var(--acc)}
-.chk{display:flex;gap:8px;align-items:center;font-size:14px;margin:6px 0} .chk input{accent-color:var(--acc)}
-button{font:inherit;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--acc);background:#fff;color:var(--acc);cursor:pointer}
-button:hover{background:var(--acc);color:#fff}
-.big{font-size:56px;font-weight:800;line-height:1} .pill{display:inline-block;padding:4px 12px;border-radius:999px;color:#fff;font-weight:600;font-size:14px}
-.bar{display:flex;height:16px;border-radius:8px;overflow:hidden;background:var(--line);margin:10px 0}
-.bar i{display:block;height:100%}
-table{width:100%;border-collapse:collapse;font-size:14px} td,th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left} .r{text-align:right}
-.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
-body{background:linear-gradient(#FFF1F7,#F3EEFD) fixed}
-.app{display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:start}@media(max-width:800px){.app{grid-template-columns:1fr}}
-.side b{display:block;margin-bottom:2px}.side small{color:#5b5670;display:block;margin-bottom:14px}
-.side button,.steps button{border:0;border-radius:10px;padding:10px 12px;background:transparent;color:var(--ink);text-align:left}
-.side button{display:block;width:100%;margin-bottom:4px}
-.side button.on,.steps button.on,button.solid{background:var(--acc);color:#fff}button.solid:hover{background:#6e1259}
-.steps{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.steps button{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}.stat b{display:block;font-size:26px}.stat span{font-size:13px;color:#5b5670}
-.yel{background:#FFF6DC;border:1px solid #F1D27A;border-radius:10px;padding:12px;margin-bottom:12px}
-.okbox{background:#E7F6EE;border:1px solid var(--ok);border-radius:10px;padding:12px;margin-bottom:12px}
-.errbox{background:#FDECEC;border:1px solid var(--bad);border-radius:10px;padding:12px;margin-bottom:12px}
-.seg{display:flex;gap:8px;margin:8px 0 14px}.seg button{flex:0 0 auto}
-.tl{list-style:none;margin:0;padding:0}.tl li{display:flex;gap:12px;padding:0 0 18px;position:relative}.tl li:before{content:"";width:14px;height:14px;border-radius:50%;background:var(--ok);flex:none;margin-top:4px}.tl li.n:before{background:#fff;border:2px solid #bbb}.tl small{color:#5b5670;display:block}
-.chat{background:#EFE9E1;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}.bub{background:#fff;border-radius:10px;padding:10px 12px;max-width:80%}.bub.me{background:#DCF8C6;align-self:flex-end}
-.deal{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}.deal .pic{height:90px;border-radius:10px;background:#f4e6f0;display:grid;place-items:center;font-size:48px;margin-bottom:10px}.deal.off{opacity:.45}
-.tag{display:inline-block;background:var(--acc);color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px}
-.hero{padding:10px 0 24px}.hero h1{font-size:40px}input[type=text].code{width:160px;font-size:22px;letter-spacing:8px;text-align:center}
-.card{overflow-x:auto}.two.n{grid-template-columns:1fr 2fr}@media(max-width:800px){.two,.two.n{grid-template-columns:1fr}main{padding:16px 12px}}</style></head><body>
-
-<main><h1>Deals near you</h1><p class="sub">Sealed parcels that could not be delivered, resold locally for 72 hours instead of going back to the seller.</p>
-<div class="two n"><div class="card"><h2>Price drops over time</h2><label>Fast-forward the clock: <b id="hr"></b></label><input type="range" id="sl" min="0" max="72" value="6" oninput="h=+this.value;draw()"><div id="lad" style="margin-top:12px"></div><p class="sub" id="end" style="margin-top:12px"></p>
-<label>Show deals within</label><select id="km" onchange="draw()" style="width:100%;padding:8px;border-radius:8px"><option value="5">5 km</option><option value="3">3 km</option></select></div>
-<div><div class="grid" id="grid"></div></div></div></main>
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#231A5C">
+  <meta name="description" content="Explore unopened, verified parcels available for local pickup through the Meesho Nearby prototype.">
+  <title>Meesho Nearby · Local deals</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nearby.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to deals</a>
+<header class="site-header"><div class="header-inner"><div class="brand"><span class="wordmark">meesho</span><span class="brand-label">Nearby</span></div><span class="prototype-label">DICE 3.0 · Prototype</span></div></header>
+<main id="main">
+  <div class="page-intro"><div class="eyebrow">Local pickup</div><h1>Deals near you</h1><p class="sub">Unopened parcels, now available close to home. Pick up a good find for up to 25% less.</p><div class="trust-line"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Sealed & verified</span><span>Local pickup</span><span>Pay at pickup</span></div></div>
+  <div class="catalog-layout">
+    <section aria-labelledby="catalog-title"><div class="catalog-head"><div><h2 id="catalog-title">Available nearby</h2><span id="count" aria-live="polite"></span></div><div class="distance-filter"><label for="km">Show deals within</label><select id="km" onchange="draw()"><option value="5">5 km</option><option value="3">3 km</option></select></div></div><div class="grid" id="grid"></div><p class="privacy-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6Z"/><path d="m8 12 3 3 5-6"/></svg>These parcels were shipped but could not be delivered. The original customer’s identity is never shared.</p></section>
+    <aside class="card price-guide" aria-labelledby="guide-title"><h2 id="guide-title">Prices drop over 72 hours</h2><p class="guide-intro">Discounts increase while the parcel is available. Here’s an example for an ₹800 item.</p><div id="lad"></div><p id="end"></p><div class="demo-clock"><span class="demo-label">Try the demo</span><label for="sl">Move the clock to see the prices change.<b id="hr"></b></label><input type="range" id="sl" min="0" max="72" value="6" oninput="h=+this.value;draw()"><div class="clock-ends"><span>0 hours</span><span>72 hours</span></div></div></aside>
+  </div>
+</main>
+<footer class="site-footer"><span>Meesho Nearby</span><span>DICE 3.0 concept prototype · Illustrative products</span></footer>
 <script>
 const D=[['Men\'s Sports Shoes','👟',800,3],['Handbag','👜',1200,4],['Cotton Kurti Set','👗',650,2],['Backpack','🎒',950,5],['Cushion Covers','🛋️',420,3],['Analog Watch','⌚',1500,4]];
+const photos={"Men's Sports Shoes":'assets/shoes.webp','Handbag':'assets/handbag.webp','Cotton Kurti Set':'assets/kurti.jpg','Backpack':'assets/backpack.webp','Cushion Covers':'assets/cushions.webp','Analog Watch':'assets/watch.webp'};
 const L=[[0,24,.4,'10% off'],[24,48,.7,'17.5% off'],[48,72,1,'25% off']];let h=6,got={};const $=i=>document.getElementById(i);
 const tier=()=>L.find(l=>h<l[1]);
 function draw(){const t=tier(),off=h>=72,km=+$('km').value;$('hr').textContent='hour '+h+' of 72';
-$('lad').innerHTML=L.map(l=>`<div class="row" style="padding:8px 10px;border-radius:10px;border:1px solid ${l==t?'var(--acc)':'var(--line)'};margin-bottom:6px;background:${l==t?'#fdf0f8':'#fff'}"><span><b>${l[0]}–${l[1]} hours</b><br><small>₹800 item → ₹${Math.round(800*(1-.25*l[2]))}</small></span><span class="tag" style="height:fit-content">${l[3]}</span></div>`).join('');
+$('lad').innerHTML=L.map(l=>`<div class="ladder-row ${l==t?'current':''}" ${l==t?'aria-current="step"':''}><span><b>${l[0]}–${l[1]} hours</b><small>₹800 → ₹${Math.round(800*(1-.25*l[2]))}</small></span><span class="tag">${l[3]}</span></div>`).join('');
 $('end').textContent=off?'Unsold after 72 hours: the parcels go back as standard seller returns.':`Next price drop in ${t[1]-h} hours. Unsold after 72 hours goes back to the seller.`;
-$('grid').innerHTML=D.filter(d=>d[3]<=km).map((d,i)=>{const pr=Math.round(d[2]*(1-.25*(off?1:t[2])));return `<div class="deal ${off?'off':''}"><div class="pic">${d[1]}</div>${off?'':`<span class="tag">${t[3]}</span>`}<h3 style="margin:8px 0 2px">${d[0]}</h3><div><s>₹${d[2]}</s> <b style="font-size:20px">₹${pr}</b></div><small>${d[3]} km away · Unopened and verified</small><p style="font-size:13px;color:#5b5670;margin:6px 0">Previously shipped but could not be delivered. The previous customer's identity is never shared.</p><button class="${got[d[0]]?'':'solid'}" ${off?'disabled':''} onclick="got['${d[0].replace(/'/g,"\\'")}']=1;draw()">${got[d[0]]?'Reserved. Pay at pickup':'Grab the deal'}</button></div>`}).join('')}
+$('count').textContent=D.filter(d=>d[3]<=km).length+' local deals';
+$('grid').innerHTML=D.filter(d=>d[3]<=km).map((d,i)=>{const pr=Math.round(d[2]*(1-.25*(off?1:t[2])));return `<article class="deal ${off?'off':''}"><div class="pic"><img src="${photos[d[0]]}" alt="${d[0]}" width="512" height="512" loading="lazy">${off?'<span class="tag">Offer ended</span>':`<span class="tag">${t[3]}</span>`}</div><div class="deal-content"><h3>${d[0]}</h3><div class="price"><s>₹${d[2]}</s><b>₹${pr}</b></div><div class="location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></svg><span>${d[3]} km away · Verified</span></div><p class="disclosure">Unopened. Previously undelivered.</p><button class="${got[d[0]]?'reserved':'solid'}" ${off?'disabled':''} onclick="got['${d[0].replace(/'/g,"\\'")}']=1;draw()">${got[d[0]]?'Reserved. Pay at pickup':'Grab the deal'}</button></div></article>`}).join('')}
 draw();
-</script></body></html>
+</script>
+</body>
+</html>

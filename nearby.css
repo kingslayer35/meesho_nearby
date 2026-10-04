@@ -1,0 +1,52 @@
+.skip-link { position: absolute; top: -60px; left: 16px; padding: 12px 16px; background: var(--surface); z-index: 10; }
+.skip-link:focus { top: 8px; }
+.page-intro { margin-bottom: 28px; }
+.page-intro p.sub { margin-bottom: 20px; max-width: 630px; }
+.trust-line { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: 13px; }
+.trust-line span { display: flex; align-items: center; gap: 6px; }
+.trust-line svg { width: 16px; height: 16px; color: var(--ok); }
+.catalog-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 28px; align-items: start; }
+.price-guide { grid-column: 1; grid-row: 1; position: sticky; top: 24px; padding: 22px; margin: 0; }
+.catalog-layout > section { grid-column: 2; grid-row: 1; }
+.price-guide h2 { font-size: 17px; margin-bottom: 8px; }
+.guide-intro { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+.ladder-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 14px 12px; border: 1px solid var(--line); border-radius: var(--radius-control); margin-bottom: 8px; }
+.ladder-row.current { background: var(--soft); border-color: #EDB5C8; }
+.ladder-row b { color: var(--navy); font-size: 13px; }
+.ladder-row small { display: block; margin-top: 3px; font-size: 12px; }
+.ladder-row .tag { background: var(--bg); color: var(--muted); font-size: 11px; padding: 3px 6px; white-space: nowrap; }
+.ladder-row.current .tag { color: var(--acc); background: var(--surface); }
+#end { color: var(--muted); font-size: 12px; margin: 16px 0 20px; }
+.demo-clock { border-top: 1px dashed #D7D3DD; padding-top: 16px; }
+.demo-clock label { margin: 8px 0 4px; font-size: 12px; color: var(--muted); font-weight: 400; }
+.demo-clock .demo-label { color: var(--muted); font-size: 11px; letter-spacing: .7px; text-transform: uppercase; font-weight: 600; }
+#hr { display: block; color: var(--navy); font-size: 13px; font-weight: 600; margin-top: 4px; }
+.clock-ends { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+.catalog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.catalog-head h2 { font-size: 19px; margin: 0 0 2px; }
+#count { color: var(--muted); font-size: 12px; }
+.distance-filter { display: flex; align-items: center; gap: 10px; }
+.distance-filter label { margin: 0; font-size: 12px; font-weight: 400; color: var(--muted); }
+.distance-filter select { width: 96px; min-height: 40px; padding: 8px 10px; font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.deal { display: flex; flex-direction: column; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-panel); overflow: hidden; }
+.pic { height: 215px; background: #F1F1F3; position: relative; display: grid; place-items: center; }
+.pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+.pic .tag { position: absolute; left: 12px; top: 12px; background: var(--surface); color: var(--acc); border: 1px solid var(--line); }
+.deal-content { display: flex; flex-direction: column; flex: 1; padding: 16px; }
+.deal h3 { font-size: 15px; margin: 0 0 8px; }
+.price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.price b { color: var(--navy); font-size: 23px; font-weight: 700; }
+.price s { color: var(--muted); font-size: 13px; }
+.deal .location { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); }
+.location svg { width: 14px; height: 14px; flex: none; }
+.deal .disclosure { font-size: 12px; color: var(--muted); margin: 8px 0 16px; }
+.deal button { width: 100%; margin-top: auto; font-size: 13px; min-height: 42px; }
+.deal button.reserved { background: var(--ok-soft); color: var(--ok); border-color: #CDE6D6; }
+.deal.off .pic { opacity: .55; }
+.privacy-note { display: flex; align-items: start; gap: 8px; font-size: 12px; color: var(--muted); margin: 20px 0 0; }
+.privacy-note svg { flex: none; width: 16px; height: 16px; margin-top: 1px; }
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pic { height: 230px; } }
+@media (max-width: 800px) { .catalog-layout { grid-template-columns: 1fr; gap: 24px; } .catalog-layout > section, .price-guide { grid-column: auto; grid-row: auto; } .price-guide { position: static; } #lad { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; } .ladder-row { flex-direction: column; align-items: start; margin: 0; } .demo-clock { max-width: 420px; } .pic { height: 250px; } }
+@media (max-width: 480px) { .catalog-head { align-items: start; } .distance-filter { flex-direction: column; gap: 4px; align-items: end; } .distance-filter select { font-size: 16px; } .grid { gap: 12px; } .pic { height: 182px; } .deal-content { padding: 12px; } .deal h3 { font-size: 14px; min-height: 36px; } .price { gap: 6px; } .price b { font-size: 21px; } .price s { font-size: 12px; } .deal .location { font-size: 11px; flex-wrap: wrap; } .deal button { padding-inline: 8px; font-size: 12px; min-height: 44px; } .trust-line { gap: 10px 16px; } .trust-line span { font-size: 12px; } #lad { gap: 6px; } .ladder-row { padding: 12px 8px; } .ladder-row b { font-size: 12px; } .ladder-row small { font-size: 11px; } }
+@media (max-width: 350px) { .grid { grid-template-columns: 1fr; } .pic { height: 240px; } .deal h3 { min-height: 0; } }
