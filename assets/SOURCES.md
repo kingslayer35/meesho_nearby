@@ -12,3 +12,7 @@ Real catalog photographs replace the original emoji placeholders. They illustrat
 | watch.webp | [Meesho analog watch](https://www.meesho.com/leather-band-analog-watch-for-men-and-boys/p/6tlvqy) |
 
 The kurti photograph is resized and encoded as JPEG for a smaller local asset. No AI generated photography is used. Images have explicit layout dimensions and preserve their proportions.
+
+## Meesho logo
+
+`meesho-logo.png` is the logo image supplied by the user for this prototype. The original PNG is copied unchanged and used locally in the app header and favicon.

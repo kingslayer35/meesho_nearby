@@ -61,6 +61,8 @@ Controls use `--radius-control` (8px); panels use `--radius-panel` (12px). Disco
 
 ## Components
 
+The user-supplied Meesho logo is stored unchanged at `assets/meesho-logo.png` and used in the header and favicon. The shared `.brand-logo` rule in `styles.css` reserves a 44px square on desktop and 40px on phones, with `alt="Meesho"` and preserved image proportions. The adjacent descriptor identifies this prototype.
+
 The existing `index.html` data and handlers remain the behavior authority. Preserve 10%, 17.5%, 25% discount tiers, 24/48/72-hour boundaries, 3/5km filtering, reservation state and the expired offer cutoff. The clock is an explicitly labelled demo control, not an actual inventory timer.
 
 Native select ownership: the `#km` select keeps browser/OS-owned popup geometry and keyboard behavior. That platform behavior is accepted for this prototype. Scrollbar owner: global `styles.css`. Focus owner: the global `:focus-visible` rule. Product images are stored locally; sources are recorded in `assets/SOURCES.md`.
